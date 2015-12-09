@@ -20,7 +20,23 @@ public class AddFilter extends AppCompatActivity {
         EditText e3 = (EditText)findViewById(R.id.eFAnnee);
         EditText e4 = (EditText)findViewById(R.id.eFName);
         DBConnections db =  new DBConnections(this);
+	try{
         db.insertF(e1.getText().toString(), e2.getText().toString(), e3.getText().toString(), e4.getText().toString());
         finish();
+	catch (SQLException e)
+	{
+		alertView("Le livre est déjà présent","Ajout d'un livre");
+	}
+    }
+
+     private void alertView( String message,String title ) {
+        AlertDialog.Builder dialog = new AlertDialog.Builder(this);
+
+        dialog.setTitle(title)
+                .setMessage(message)
+                .setPositiveButton("Ok", new DialogInterface.OnClickListener() {
+                    public void onClick(DialogInterface dialoginterface, int i) {
+                    }
+                }).show();
     }
 }

@@ -97,12 +97,19 @@ public class Add extends AppCompatActivity implements AdapterView.OnItemSelected
         }
         //add in the books table all the content of the form
         DBConnections db = new DBConnections(this);
+	try
+	{
         db.insertRawAdmin(vIsbn.getText().toString(), vTitre.getText().toString(), vAuthor.getText().toString(),
                 vAuthor2.getText().toString(), vSerie.getText().toString(), genre,
                 vEditeur.getText().toString(), vAnnee.getText().toString(),
                 vAnnotation.getText().toString(), vImage.getText().toString(),
                 vDescription.getText().toString());
         finish();
+	}
+	catch (SQLException e)
+	{
+		alertView("Le livre est déjà présent","Ajout d'un livre");
+	}
     }
 
     //to caul the scan application
@@ -279,6 +286,17 @@ public class Add extends AppCompatActivity implements AdapterView.OnItemSelected
         TextView vImage = (TextView) findViewById(R.id.textImage);
         vImage.setText(isbn+".bmp");
         startActivityForResult(cameraIntent, REQUEST_IMAGE_CAPTURE);
+    }
+
+	private void alertView( String message,String title ) {
+        AlertDialog.Builder dialog = new AlertDialog.Builder(this);
+
+        dialog.setTitle(title)
+                .setMessage(message)
+                .setPositiveButton("Ok", new DialogInterface.OnClickListener() {
+                    public void onClick(DialogInterface dialoginterface, int i) {
+                    }
+                }).show();
     }
 }
 
