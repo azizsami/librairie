@@ -39,7 +39,7 @@ public class Add extends AppCompatActivity implements AdapterView.OnItemSelected
     private ImageView imgSpecimenPhoto;
     public File tempFile;
     public String isbn;
-    Spinner spinner;  // Spinner  element
+    Spinner spinner;  // Spinner element
     String genre;
     DBConnections db1 = new DBConnections(this);
 
