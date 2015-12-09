@@ -3,14 +3,8 @@
     android:layout_height="match_parent" android:paddingLeft="@dimen/activity_horizontal_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
-    android:paddingBottom="@dimen/activity_vertical_margin" tools:context=".MainActivity">
-
-    <TextView
-        android:id="@+id/titre"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Librairie Application"
-        android:textSize="30dp" />
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    tools:context="com.example.lahcene.librairie.DBManager">
 
     <LinearLayout
         android:orientation="vertical"
@@ -47,8 +41,10 @@
                 android:layout_alignLeft="@+id/value11"
                 android:layout_alignRight="@+id/value11"
                 android:layout_below="@+id/value11"
-                android:text="Add a book"
-                android:id="@+id/btnE" />
+                android:text="Export Database"
+                android:id="@+id/btnE"
+                android:nestedScrollingEnabled="true"
+                android:onClick="onClick" />
 
         </LinearLayout>
 
@@ -62,26 +58,10 @@
                 android:layout_alignLeft="@+id/btnE"
                 android:layout_alignRight="@+id/btnE"
                 android:layout_below="@+id/btnE"
-                android:text="Show book list"
-                android:id="@+id/btnaff" />
+                android:text="Import Database"
+                android:id="@+id/btnI"
+                android:onClick="onClick" />
 
-
-        </LinearLayout>
-
-
-        <LinearLayout
-            android:orientation="horizontal"
-            android:layout_width="fill_parent"
-            android:layout_height="wrap_content">
-            <Button
-                android:layout_width="fill_parent"
-                android:layout_height="fill_parent"
-                android:layout_alignLeft="@+id/btnE"
-                android:layout_alignRight="@+id/btnE"
-                android:layout_below="@+id/btnE"
-                android:text="Show filters"
-                android:id="@+id/btnFilter"
-                />
 
         </LinearLayout>
 
@@ -96,9 +76,26 @@
                 android:layout_alignLeft="@+id/btnE"
                 android:layout_alignRight="@+id/btnE"
                 android:layout_below="@+id/btnE"
-                android:text="Database Manager"
-                android:id="@+id/btnDBManager"
-                />
+                android:text="Delete Database"
+                android:id="@+id/btnD"
+                android:onClick="onClick" />
+
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content">
+            <Button
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:layout_alignLeft="@+id/btnE"
+                android:layout_alignRight="@+id/btnE"
+                android:layout_below="@+id/btnE"
+                android:text="Close"
+                android:id="@+id/btnC"
+                android:onClick="onClick" />
 
         </LinearLayout>
 

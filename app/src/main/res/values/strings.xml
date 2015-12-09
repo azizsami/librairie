@@ -1,4 +1,13 @@
 <resources>
-    <string name="app_name">startProject</string>
+    <string name="app_name">librairie</string>
+
+    <string name="hello_world">Hello world!</string>
     <string name="action_settings">Settings</string>
+    <string name="title_activity_add">Add</string>
+    <string name="title_activity_dbconnections">DBConnections</string>
+    <string name="title_activity_dbmanager">DBManager</string>
+    <string name="title_activity_up_date">UpDate</string>
+    <string name="title_activity_add_filter">AddFilter</string>
+    <string name="title_activity_filter">Filter</string>
+    <string name="title_activity_main_list">MainList</string>
 </resources>

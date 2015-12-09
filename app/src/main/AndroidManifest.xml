@@ -1,22 +1,64 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.example.lahcene.startproject">
+    package="com.example.lahcene.librairie" >
 
+    <uses-sdk
+        android:minSdkVersion="8"
+        android:targetSdkVersion="18" />
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_LOCATION_EXTRA_COMMANDS" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="com.example.towntour.permission.MAPS_RECEIVE" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.CALL_PHONE" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission android:name="com.google.android.providers.gsf.permission.READ_GSERVICES" />
+
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
-        android:supportsRtl="true"
-        android:theme="@style/AppTheme">
+        android:theme="@style/AppTheme" >
         <activity
             android:name=".MainActivity"
-            android:label="@string/app_name"
-            android:theme="@style/AppTheme.NoActionBar">
+            android:label="@string/app_name" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
+        </activity>
+        <activity
+            android:name=".Add"
+            android:label="@string/title_activity_add" >
+        </activity>
+        <activity
+            android:name=".DBConnections"
+            android:label="@string/title_activity_dbconnections" >
+        </activity>
+        <activity
+            android:name=".DBManager"
+            android:label="@string/title_activity_dbmanager" >
+        </activity>
+        <activity
+            android:name=".UpDate"
+            android:label="@string/title_activity_up_date" >
+        </activity>
+        <activity
+            android:name=".AddFilter"
+            android:label="@string/title_activity_add_filter" >
+        </activity>
+        <activity
+            android:name=".Filter"
+            android:label="@string/title_activity_filter" >
+        </activity>
+        <activity
+            android:name=".MainList"
+            android:label="@string/title_activity_main_list" >
         </activity>
     </application>
 
